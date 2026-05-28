@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-church-cream text-church-gray font-sans text-base;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-church-navy;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button {
+    @apply min-h-[48px];
+  }
+
+  input, textarea, select {
+    @apply text-base;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .container-base {
+    @apply max-w-6xl mx-auto px-6;
+  }
+
+  .card-base {
+    @apply rounded-2xl shadow-sm bg-white;
+  }
+
+  .bible-quote {
+    @apply font-lora italic text-church-navy border-l-4 border-church-gold pl-4;
+  }
+
+  .section-label {
+    @apply font-sans text-sm uppercase tracking-widest text-church-gold;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-church-gold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Skip to content */
+.skip-to-content {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-church-navy focus:text-white focus:px-4 focus:py-2 focus:rounded-lg;
+}
