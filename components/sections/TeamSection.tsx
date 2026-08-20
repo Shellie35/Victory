@@ -14,20 +14,20 @@ const team = [
   {
     image:  '/images/team-pastor.jpg',
     name:   'Pastor John Smith',
-    role:   'Leitender Pastor',
-    bio:    'John Smith leitet Victory Baptist Church seit ihrer Gründung. Mit einem Herz für die internationale Gemeinschaft in Stuttgart predigt er leidenschaftlich aus dem Wort Gottes und liebt es, Menschen auf ihrem Glaubensweg zu begleiten.',
+    role:   'Senior Pastor',
+    bio:    'Pastor Smith leads Victory Baptist Church with a passion for faithful Gospel preaching and a heart for the international community in Stuttgart. He preaches from the King James Bible and is devoted to sound, independent Baptist doctrine.',
   },
   {
     image:  '/images/team-youth.jpg',
     name:   'Sarah Müller',
-    role:   'Jugendarbeit & Gemeinschaft',
-    bio:    'Sarah kümmert sich mit viel Energie und Kreativität um die Jugend und Gemeinschaftsveranstaltungen. Ihr Ziel ist es, einen Ort zu schaffen, an dem sich jeder willkommen und zugehörig fühlt.',
+    role:   'Youth & Community',
+    bio:    'Sarah oversees youth ministry and community outreach with energy and creativity. She is passionate about creating a place where every person — regardless of background or nationality — feels genuinely loved and welcome.',
   },
   {
     image:  '/images/team-music.jpg',
     name:   'David Okonkwo',
-    role:   'Musik & Anbetung',
-    bio:    'David leitet den Lobpreisdienst mit Leidenschaft und musikalischem Talent. Er glaubt, dass Anbetung die Herzen für Gottes Gegenwart öffnet — auf Englisch, Deutsch und darüber hinaus.',
+    role:   'Music & Worship',
+    bio:    'David leads the worship ministry with a gift for music and a heart of praise. He believes that congregational worship opens hearts to God\'s presence — and brings the international body of Christ together in one voice.',
   },
 ];
 
@@ -35,10 +35,10 @@ export default function TeamSection() {
   return (
     <SectionWrapper id="team" bg="white">
       <AnimatedSection className="text-center mb-14">
-        <span className="section-label block mb-3">Menschen hinter der Gemeinde</span>
-        <h2 className="text-balance">Unser Team</h2>
+        <span className="section-label block mb-3">The People Behind the Church</span>
+        <h2 className="text-balance">Meet Our Team</h2>
         <p className="font-sans text-church-gray mt-4 max-w-xl mx-auto text-base md:text-lg">
-          Lerne die Menschen kennen, die Victory Baptist Church mit Herz und Hingabe gestalten.
+          Dedicated, warm, and Gospel-focused — get to know the people who serve Victory Baptist Church.
         </p>
       </AnimatedSection>
 
@@ -46,11 +46,10 @@ export default function TeamSection() {
         {team.map((member) => (
           <AnimatedItem key={member.name}>
             <article className="card-base p-8 text-center flex flex-col items-center">
-              {/* Circular image */}
               <div className="relative w-28 h-28 rounded-full overflow-hidden bg-church-navy/10 mb-5 ring-4 ring-church-gold/20 shrink-0">
                 <Image
                   src={member.image}
-                  alt={`Foto von ${member.name}`}
+                  alt={`Photo of ${member.name}`}
                   fill
                   className="object-cover"
                   placeholder="blur"
@@ -72,10 +71,10 @@ export default function TeamSection() {
 
       <AnimatedSection delay={0.4} className="text-center mt-10">
         <Link
-          href="/ueber-uns"
+          href="/about"
           className="inline-flex items-center gap-2 font-sans font-medium text-church-gold hover:text-church-navy transition-colors duration-200 text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-church-gold rounded"
         >
-          Lern uns kennen
+          Learn More About Us
           <RiArrowRightLine size={20} aria-hidden="true" />
         </Link>
       </AnimatedSection>

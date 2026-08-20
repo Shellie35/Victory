@@ -21,12 +21,12 @@ const blurDataURL =
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero">
+    <section className="relative min-h-[78vh] flex items-center justify-center overflow-hidden bg-church-navy" aria-label="Hero">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero.jpg"
-          alt="Gemeinde im Gottesdienst — Victory Baptist Church Stuttgart"
+          alt="Victory Baptist Church Stuttgart — congregation in worship"
           fill
           priority
           className="object-cover"
@@ -34,8 +34,7 @@ export default function HeroSection() {
           blurDataURL={blurDataURL}
           sizes="100vw"
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-church-navy/75 via-church-navy/50 to-church-navy/30" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-church-navy/80 via-church-navy/65 to-church-navy/55" aria-hidden="true" />
       </div>
 
       {/* Content */}
@@ -58,7 +57,7 @@ export default function HeroSection() {
           {...fadeUp(0.4)}
           className="font-lora italic text-white/90 text-xl mt-6 max-w-xl text-balance"
         >
-          We are an English-speaking, independent, Baptist church in Stuttgart.
+          We are an English-speaking, independent, Baptist church in Stuttgart — preaching the Gospel to the international community.
         </motion.p>
 
         <motion.blockquote
@@ -66,7 +65,7 @@ export default function HeroSection() {
           className="font-lora italic text-white/65 text-sm mt-4"
           cite="John 3:16"
         >
-          &ldquo;For God so loved the world, that he gave his only begotten Son…&rdquo; — John 3:16
+          &ldquo;For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.&rdquo; — John 3:16
         </motion.blockquote>
 
         <motion.div
@@ -74,16 +73,16 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 mt-10 w-full justify-center"
         >
           <Link
-            href="/gottesdienste"
+            href="/services"
             className="inline-flex items-center justify-center gap-2 bg-church-gold text-white font-sans font-medium rounded-full px-8 py-4 min-h-[52px] hover:bg-church-goldLight transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
-            Gottesdienst besuchen
+            Join Us Sunday at 10:45 AM
           </Link>
           <Link
-            href="/ueber-uns"
+            href="/about"
             className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-sans font-medium rounded-full px-8 py-4 min-h-[52px] hover:bg-white/10 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
-            More about us
+            Learn More About Us
           </Link>
         </motion.div>
       </div>

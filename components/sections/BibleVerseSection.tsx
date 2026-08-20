@@ -3,7 +3,7 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 export default function BibleVerseSection() {
   return (
     <section className="bg-church-navy section-padding relative overflow-hidden">
-      {/* Decorative subtle leaf shapes */}
+      {/* Decorative leaf shapes */}
       <svg
         className="absolute left-0 top-1/2 -translate-y-1/2 opacity-5 h-64 w-auto"
         viewBox="0 0 120 200"
@@ -23,7 +23,6 @@ export default function BibleVerseSection() {
 
       <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
         <AnimatedSection>
-          {/* Large decorative quotation mark */}
           <div
             className="font-serif text-9xl text-church-gold/20 leading-none mb-4 select-none h-16 flex items-center justify-center"
             aria-hidden="true"
@@ -31,14 +30,13 @@ export default function BibleVerseSection() {
             &ldquo;
           </div>
 
-          <blockquote className="font-lora italic text-white text-2xl md:text-3xl leading-relaxed text-balance" cite="Matthäus 11:28">
-            Kommt her zu mir, alle, die ihr mühselig und beladen seid,
-            ich will euch erquicken.
+          <blockquote className="font-lora italic text-white text-2xl md:text-3xl leading-relaxed text-balance" cite="Matthew 11:28">
+            Come unto me, all ye that labour and are heavy laden, and I will give you rest.
           </blockquote>
 
           <footer className="mt-6">
             <cite className="font-sans text-sm uppercase tracking-widest text-church-gold not-italic">
-              Matthäus 11:28
+              Matthew 11:28 (KJV)
             </cite>
           </footer>
         </AnimatedSection>

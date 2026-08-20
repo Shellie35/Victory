@@ -7,11 +7,11 @@ import { RiMenuLine, RiCloseLine } from 'react-icons/ri';
 import Button from '@/components/ui/Button';
 
 const navLinks = [
-  { label: 'Home',           href: '/' },
-  { label: 'Gottesdienste',  href: '/gottesdienste' },
-  { label: 'Predigten',      href: '/predigten' },
-  { label: 'Über uns',       href: '/ueber-uns' },
-  { label: 'Kontakt',        href: '/kontakt' },
+  { label: 'Home',      href: '/' },
+  { label: 'Services',  href: '/services' },
+  { label: 'Sermons',   href: '/sermons' },
+  { label: 'About Us',  href: '/about' },
+  { label: 'Contact',   href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -35,16 +35,16 @@ export default function Navbar() {
   }, [menuOpen]);
 
   const navBg = scrolled
-    ? 'bg-church-cream/95 backdrop-blur-md shadow-sm'
-    : 'bg-transparent';
+    ? 'bg-white shadow-md'
+    : 'bg-white shadow-sm';
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>
-      <nav className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Hauptnavigation">
+      <nav className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Main navigation">
 
         {/* Logo */}
         <Link href="/" className="flex flex-col leading-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-church-gold rounded">
-          <span className={`font-serif font-bold text-lg transition-colors duration-300 ${scrolled ? 'text-church-navy' : 'text-white'}`}>
+          <span className="font-serif font-bold text-lg text-church-navy">
             Victory Baptist Church
           </span>
           <span className="font-sans text-xs text-church-gold tracking-widest uppercase">Stuttgart</span>
@@ -61,9 +61,7 @@ export default function Navbar() {
                   className={`font-sans text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-church-gold rounded
                     ${active
                       ? 'text-church-gold underline underline-offset-4'
-                      : scrolled
-                        ? 'text-church-navy hover:text-church-gold'
-                        : 'text-white/90 hover:text-white'
+                      : 'text-church-navy hover:text-church-gold'
                     }`}
                   aria-current={active ? 'page' : undefined}
                 >
@@ -76,16 +74,16 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <Button as="link" href="/gottesdienste" variant="primary" size="sm">
-            Besuche uns
+          <Button as="link" href="/services" variant="primary" size="sm">
+            Join Us
           </Button>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className={`md:hidden p-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-church-gold transition-colors ${scrolled ? 'text-church-navy' : 'text-white'}`}
+          className="md:hidden p-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-church-gold transition-colors text-church-navy"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Menü schließen' : 'Menü öffnen'}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
         >
           {menuOpen ? <RiCloseLine size={26} /> : <RiMenuLine size={26} />}
@@ -118,8 +116,8 @@ export default function Navbar() {
             })}
           </ul>
           <div className="mt-8">
-            <Button as="link" href="/gottesdienste" variant="gold" fullWidth size="lg">
-              Besuche uns
+            <Button as="link" href="/services" variant="gold" fullWidth size="lg">
+              Join Us Sunday
             </Button>
           </div>
         </div>

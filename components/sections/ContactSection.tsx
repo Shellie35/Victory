@@ -2,7 +2,7 @@
 
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import AnimatedSection from '@/components/ui/AnimatedSection';
-import { RiMapPin2Line, RiTimeLine, RiMailLine, RiFacebookFill, RiInstagramLine, RiYoutubeFill } from 'react-icons/ri';
+import { RiMapPin2Line, RiTimeLine, RiMailLine, RiFacebookFill, RiInstagramLine, RiYoutubeFill, RiCarLine, RiBusLine } from 'react-icons/ri';
 import Button from '@/components/ui/Button';
 import { useState, FormEvent } from 'react';
 
@@ -27,12 +27,12 @@ export default function ContactSection() {
   }
 
   return (
-    <SectionWrapper id="kontakt" bg="cream">
+    <SectionWrapper id="contact" bg="cream">
       <AnimatedSection className="text-center mb-14">
-        <span className="section-label block mb-3">Wir freuen uns von dir zu hören</span>
-        <h2 className="text-balance">Kontakt</h2>
+        <span className="section-label block mb-3">We&apos;d Love to Hear from You</span>
+        <h2 className="text-balance">Get in Touch</h2>
         <p className="font-sans text-church-gray mt-4 max-w-xl mx-auto text-base md:text-lg">
-          Fragen, Gebetsanliegen oder einfach ein Hallo — schreib uns gerne.
+          Questions, prayer requests, or just a hello — reach out any time.
         </p>
       </AnimatedSection>
 
@@ -43,95 +43,67 @@ export default function ContactSection() {
           {submitted ? (
             <div className="card-base p-10 text-center">
               <div className="text-5xl mb-4">✉️</div>
-              <h3 className="mb-3">Danke für deine Nachricht!</h3>
+              <h3 className="mb-3">Thank you for your message!</h3>
               <p className="font-sans text-church-gray">
-                Wir melden uns so bald wie möglich bei dir. Bis bald!
+                We will get back to you as soon as possible. God bless you!
               </p>
             </div>
           ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="card-base p-7 md:p-10 space-y-5"
-              noValidate
-            >
+            <form onSubmit={handleSubmit} className="card-base p-7 md:p-10 space-y-5" noValidate>
               <div>
                 <label htmlFor="name" className="font-sans text-sm font-medium text-church-navy mb-2 block">
                   Name <span className="text-church-gold" aria-hidden="true">*</span>
                 </label>
                 <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  required
-                  autoComplete="name"
-                  placeholder="Dein vollständiger Name"
-                  className={inputClass}
-                  aria-required="true"
+                  id="name" type="text" name="name" required autoComplete="name"
+                  placeholder="Your full name"
+                  className={inputClass} aria-required="true"
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="font-sans text-sm font-medium text-church-navy mb-2 block">
-                  E-Mail <span className="text-church-gold" aria-hidden="true">*</span>
+                  Email <span className="text-church-gold" aria-hidden="true">*</span>
                 </label>
                 <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  required
-                  autoComplete="email"
-                  placeholder="deine@email.de"
-                  className={inputClass}
-                  aria-required="true"
+                  id="email" type="email" name="email" required autoComplete="email"
+                  placeholder="your@email.com"
+                  className={inputClass} aria-required="true"
                 />
               </div>
 
               <div>
                 <label htmlFor="subject" className="font-sans text-sm font-medium text-church-navy mb-2 block">
-                  Betreff
+                  Subject
                 </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  className={inputClass}
-                  defaultValue=""
-                >
-                  <option value="" disabled>Bitte wählen…</option>
-                  <option value="allgemein">Allgemeine Anfrage</option>
-                  <option value="gottesdienst">Gottesdienst</option>
-                  <option value="gebet">Gebetsanliegen</option>
-                  <option value="sonstiges">Sonstiges</option>
+                <select id="subject" name="subject" className={inputClass} defaultValue="">
+                  <option value="" disabled>Please select…</option>
+                  <option value="general">General Enquiry</option>
+                  <option value="service">Service Times & Location</option>
+                  <option value="prayer">Prayer Request</option>
+                  <option value="events">Events & Registration</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
 
               <div>
                 <label htmlFor="message" className="font-sans text-sm font-medium text-church-navy mb-2 block">
-                  Nachricht <span className="text-church-gold" aria-hidden="true">*</span>
+                  Message <span className="text-church-gold" aria-hidden="true">*</span>
                 </label>
                 <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={4}
-                  placeholder="Deine Nachricht…"
+                  id="message" name="message" required rows={4}
+                  placeholder="Your message…"
                   className={`${inputClass} min-h-[120px] resize-y`}
                   aria-required="true"
                 />
               </div>
 
-              <Button
-                type="submit"
-                variant="primary"
-                size="lg"
-                fullWidth
-                disabled={loading}
-                aria-label="Nachricht absenden"
-              >
-                {loading ? 'Wird gesendet…' : 'Nachricht senden'}
+              <Button type="submit" variant="primary" size="lg" fullWidth disabled={loading} aria-label="Send message">
+                {loading ? 'Sending…' : 'Send Message'}
               </Button>
 
               <p className="font-sans text-xs text-church-gray/60 text-center">
-                Deine Daten werden vertraulich behandelt und nicht weitergegeben.
+                Your information is kept private and will never be shared.
               </p>
             </form>
           )}
@@ -140,7 +112,7 @@ export default function ContactSection() {
         {/* Right: Info card */}
         <AnimatedSection delay={0.2}>
           <div className="bg-church-navy text-white rounded-2xl p-8 md:p-10 h-full flex flex-col">
-            <h3 className="font-serif font-semibold text-xl text-white mb-8">Besuche uns</h3>
+            <h3 className="font-serif font-semibold text-xl text-white mb-8">Find Us</h3>
 
             <ul className="space-y-6 flex-1" role="list">
               <li className="flex items-start gap-4">
@@ -148,9 +120,9 @@ export default function ContactSection() {
                   <RiMapPin2Line size={18} className="text-church-gold" aria-hidden="true" />
                 </div>
                 <div>
-                  <span className="font-sans text-xs uppercase tracking-widest text-church-gold block mb-1">Adresse</span>
+                  <span className="font-sans text-xs uppercase tracking-widest text-church-gold block mb-1">Address</span>
                   <address className="font-sans text-white/85 not-italic text-sm leading-relaxed">
-                    Musterstraße 12<br />70173 Stuttgart
+                    Schulze-Delitzsch-Straße 30<br />70565 Stuttgart<br />(Vaihingen district)
                   </address>
                 </div>
               </li>
@@ -160,8 +132,28 @@ export default function ContactSection() {
                   <RiTimeLine size={18} className="text-church-gold" aria-hidden="true" />
                 </div>
                 <div>
-                  <span className="font-sans text-xs uppercase tracking-widest text-church-gold block mb-1">Gottesdienst</span>
-                  <p className="font-sans text-white/85 text-sm">Sonntags, 10:00 Uhr</p>
+                  <span className="font-sans text-xs uppercase tracking-widest text-church-gold block mb-1">Sunday Service</span>
+                  <p className="font-sans text-white/85 text-sm">10:45 AM · Sunday School at 10:20 AM</p>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                  <RiCarLine size={18} className="text-church-gold" aria-hidden="true" />
+                </div>
+                <div>
+                  <span className="font-sans text-xs uppercase tracking-widest text-church-gold block mb-1">Parking</span>
+                  <p className="font-sans text-white/85 text-sm">Free parking available onsite</p>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                  <RiBusLine size={18} className="text-church-gold" aria-hidden="true" />
+                </div>
+                <div>
+                  <span className="font-sans text-xs uppercase tracking-widest text-church-gold block mb-1">Public Transport</span>
+                  <p className="font-sans text-white/85 text-sm">S-Bahn / U-Bahn: <strong>Lapp Kabel</strong></p>
                 </div>
               </li>
 
@@ -170,7 +162,7 @@ export default function ContactSection() {
                   <RiMailLine size={18} className="text-church-gold" aria-hidden="true" />
                 </div>
                 <div>
-                  <span className="font-sans text-xs uppercase tracking-widest text-church-gold block mb-1">E-Mail</span>
+                  <span className="font-sans text-xs uppercase tracking-widest text-church-gold block mb-1">Email</span>
                   <a
                     href="mailto:info@victorybaptist-stuttgart.de"
                     className="font-sans text-white/85 text-sm hover:text-church-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-church-gold rounded"
@@ -182,13 +174,11 @@ export default function ContactSection() {
             </ul>
 
             <div className="mt-8 pt-6 border-t border-white/15">
-              <p className="font-sans text-xs text-white/50 mb-4 uppercase tracking-widest">Folge uns</p>
+              <p className="font-sans text-xs text-white/50 mb-4 uppercase tracking-widest">Follow Us</p>
               <div className="flex gap-3" role="list" aria-label="Social Media">
                 {socialLinks.map(({ icon: Icon, label, href }) => (
                   <a
-                    key={label}
-                    href={href}
-                    aria-label={label}
+                    key={label} href={href} aria-label={label}
                     className="w-10 h-10 rounded-full bg-white/10 hover:bg-church-gold flex items-center justify-center transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-church-gold"
                   >
                     <Icon size={16} aria-hidden="true" />

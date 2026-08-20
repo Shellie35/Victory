@@ -29,18 +29,18 @@ export const metadata: Metadata = {
     template: '%s | Victory Baptist Church Stuttgart',
   },
   description:
-    'Eine englischsprachige, unabhängige Baptistengemeinde in Stuttgart. Gottesdienste sonntags um 10 Uhr. Alle sind willkommen.',
-  keywords: ['Baptist', 'Stuttgart', 'Kirche', 'Church', 'englisch', 'Gottesdienst', 'Germany'],
+    'An English-speaking, independent Baptist church in Stuttgart, Germany. Sunday services at 10:45 AM. Everyone is welcome.',
+  keywords: ['Baptist', 'Stuttgart', 'English church', 'expat church', 'international church', 'Bible', 'Germany', 'Vaihingen'],
   authors: [{ name: 'Victory Baptist Church Stuttgart' }],
   creator: 'Victory Baptist Church Stuttgart',
   openGraph: {
     type: 'website',
-    locale: 'de_DE',
+    locale: 'en_US',
     url: 'https://www.victorybaptist-stuttgart.de',
     siteName: 'Victory Baptist Church Stuttgart',
     title: 'Victory Baptist Church Stuttgart',
     description:
-      'Eine englischsprachige, unabhängige Baptistengemeinde in Stuttgart. Gottesdienste sonntags um 10 Uhr.',
+      'An English-speaking, independent Baptist church in Stuttgart, Germany. Sunday services at 10:45 AM.',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Victory Baptist Church Stuttgart',
-    description: 'Eine englischsprachige, unabhängige Baptistengemeinde in Stuttgart.',
+    description: 'An English-speaking, independent Baptist church in Stuttgart, Germany.',
     images: ['/images/og-image.jpg'],
   },
   alternates: {
@@ -67,10 +67,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de" className={`${playfair.variable} ${inter.variable} ${lora.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} ${lora.variable}`}>
       <body className="antialiased">
         <a href="#main-content" className="skip-to-content">
-          Zum Hauptinhalt springen
+          Skip to main content
         </a>
         <Navbar />
         <main id="main-content" tabIndex={-1}>
