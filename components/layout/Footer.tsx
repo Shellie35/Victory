@@ -2,10 +2,11 @@ import Link from 'next/link';
 import { RiFacebookFill, RiInstagramLine, RiYoutubeFill, RiMapPin2Line, RiTimeLine, RiMailLine } from 'react-icons/ri';
 
 const quickLinks = [
-  { label: 'Services',  href: '/services' },
-  { label: 'Sermons',   href: '/sermons' },
-  { label: 'Join Us',   href: '/about' },
-  { label: 'Contact',   href: '/contact' },
+  { label: 'Services',      href: '/services' },
+  { label: 'Sermons',       href: '/sermons' },
+  { label: 'Our Beliefs',   href: '/about' },
+  { label: 'Way to Heaven', href: '/way-to-heaven' },
+  { label: 'Contact',       href: '/contact' },
 ];
 
 const socialLinks = [

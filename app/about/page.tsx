@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import AnimatedSection, { AnimatedItem } from '@/components/ui/AnimatedSection';
-import TeamSection from '@/components/sections/TeamSection';
 import BibleVerseSection from '@/components/sections/BibleVerseSection';
 import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
-  title: 'Join Us',
+  title: 'Our Beliefs',
   description:
-    'Join Victory Baptist Church Stuttgart — learn about our mission, beliefs, and the people behind our congregation.',
+    'The doctrinal beliefs of Victory Baptist Church Stuttgart — what we believe about the Bible, salvation, Christ, and the church.',
 };
 
 const beliefs = [
@@ -53,10 +52,10 @@ export default function AboutPage() {
       <section className="bg-church-navy section-padding pt-40">
         <div className="container-base text-center">
           <AnimatedSection>
-            <span className="section-label block mb-4 text-church-gold">Our Story & Beliefs</span>
-            <h1 className="text-white text-5xl md:text-6xl mb-6">Join Us</h1>
+            <span className="section-label block mb-4 text-church-gold">Our Foundation</span>
+            <h1 className="text-white text-5xl md:text-6xl mb-6">Our Beliefs</h1>
             <p className="font-lora italic text-white/80 text-xl max-w-2xl mx-auto text-balance">
-              An English-speaking Baptist church with a heart for Stuttgart&apos;s international community.
+              Sound doctrine. Clear truth. The Bible alone.
             </p>
           </AnimatedSection>
         </div>
@@ -140,57 +139,6 @@ export default function AboutPage() {
         </AnimatedSection>
       </SectionWrapper>
 
-      {/* First-time visitor info */}
-      <SectionWrapper bg="cream">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <AnimatedSection>
-            <span className="section-label block mb-3">Planning Your Visit</span>
-            <h2 className="mb-6">What to Expect</h2>
-            <div className="space-y-4 text-church-gray font-sans text-base md:text-lg leading-relaxed">
-              <p>
-                Expect a blessed time among loving people. Our services are conducted entirely in
-                English, with a warm and traditional Baptist style of worship.
-              </p>
-              <ul className="space-y-3 mt-4">
-                {[
-                  'Bring your children — there are activities for every age group',
-                  'Nursery provided for children ages 0–3 during all services',
-                  'Junior Church for children 4–12 during the Sunday morning service',
-                  'Free parking available onsite — no need to worry about a space',
-                  'No dress code — come as you are',
-                  'Services are in English; German service at 9:00 AM',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-church-gold mt-2.5 shrink-0" aria-hidden="true" />
-                    <span className="text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.2}>
-            <div className="bg-church-navy text-white rounded-2xl p-8 md:p-10">
-              <span className="section-label block mb-4 text-church-gold">German Speakers</span>
-              <h3 className="text-white text-xl mb-4">Sprechen Sie Deutsch?</h3>
-              <p className="font-sans text-white/80 text-sm leading-relaxed mb-6">
-                We hold a German-language service every Sunday at <strong className="text-white">9:00 AM</strong>.
-                German-speaking visitors are also warmly referred to our sister church:
-              </p>
-              <a
-                href="https://www.wgg-baptisten.de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border-2 border-church-gold text-church-gold hover:bg-church-gold hover:text-white transition-colors font-sans font-medium rounded-full px-6 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-              >
-                Wort Gottes Gemeinde →
-              </a>
-            </div>
-          </AnimatedSection>
-        </div>
-      </SectionWrapper>
-
-      <TeamSection />
       <BibleVerseSection />
 
       {/* CTA */}

@@ -7,11 +7,12 @@ import { RiMenuLine, RiCloseLine } from 'react-icons/ri';
 import Button from '@/components/ui/Button';
 
 const navLinks = [
-  { label: 'Home',      href: '/' },
-  { label: 'Services',  href: '/services' },
-  { label: 'Sermons',   href: '/sermons' },
-  { label: 'Join Us',   href: '/about' },
-  { label: 'Contact',   href: '/contact' },
+  { label: 'Home',         href: '/' },
+  { label: 'Services',     href: '/services' },
+  { label: 'Sermons',      href: '/sermons' },
+  { label: 'Our Beliefs',  href: '/about' },
+  { label: 'Way to Heaven', href: '/way-to-heaven' },
+  { label: 'Contact',      href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -74,8 +75,8 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <Button as="link" href="/services" variant="primary" size="sm">
-            Join Us
+          <Button as="link" href="/contact" variant="primary" size="sm">
+            Contact
           </Button>
         </div>
 
