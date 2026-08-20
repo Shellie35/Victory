@@ -74,7 +74,7 @@ export default function TeamSection() {
           href="/about"
           className="inline-flex items-center gap-2 font-sans font-medium text-church-gold hover:text-church-navy transition-colors duration-200 text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-church-gold rounded"
         >
-          Learn More About Us
+          Join Us
           <RiArrowRightLine size={20} aria-hidden="true" />
         </Link>
       </AnimatedSection>

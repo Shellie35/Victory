@@ -4,7 +4,7 @@ import { RiFacebookFill, RiInstagramLine, RiYoutubeFill, RiMapPin2Line, RiTimeLi
 const quickLinks = [
   { label: 'Services',  href: '/services' },
   { label: 'Sermons',   href: '/sermons' },
-  { label: 'About Us',  href: '/about' },
+  { label: 'Join Us',   href: '/about' },
   { label: 'Contact',   href: '/contact' },
 ];
 

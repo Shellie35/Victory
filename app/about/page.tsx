@@ -6,9 +6,9 @@ import BibleVerseSection from '@/components/sections/BibleVerseSection';
 import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'Join Us',
   description:
-    'Learn about Victory Baptist Church Stuttgart — our mission, beliefs, and the people behind our congregation.',
+    'Join Victory Baptist Church Stuttgart — learn about our mission, beliefs, and the people behind our congregation.',
 };
 
 const beliefs = [
@@ -54,7 +54,7 @@ export default function AboutPage() {
         <div className="container-base text-center">
           <AnimatedSection>
             <span className="section-label block mb-4 text-church-gold">Our Story & Beliefs</span>
-            <h1 className="text-white text-5xl md:text-6xl mb-6">About Us</h1>
+            <h1 className="text-white text-5xl md:text-6xl mb-6">Join Us</h1>
             <p className="font-lora italic text-white/80 text-xl max-w-2xl mx-auto text-balance">
               An English-speaking Baptist church with a heart for Stuttgart&apos;s international community.
             </p>
@@ -207,7 +207,7 @@ export default function AboutPage() {
               Service Times & Location
             </Button>
             <Button as="link" href="/contact" variant="outline" size="md">
-              Contact Us
+              Get in Touch
             </Button>
           </div>
         </AnimatedSection>
