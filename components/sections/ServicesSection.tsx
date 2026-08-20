@@ -1,7 +1,6 @@
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import AnimatedSection, { AnimatedItem } from '@/components/ui/AnimatedSection';
-import Button from '@/components/ui/Button';
-import { RiBookOpenLine, RiTeamLine, RiMoonLine, RiHeartLine, RiMapPin2Line, RiBusLine, RiCarLine } from 'react-icons/ri';
+import { RiBookOpenLine, RiTeamLine, RiMoonLine, RiHeartLine } from 'react-icons/ri';
 
 const services = [
   {
@@ -71,79 +70,6 @@ export default function ServicesSection() {
         })}
       </AnimatedSection>
 
-      {/* Address + practical info */}
-      <AnimatedSection delay={0.3}>
-        <div className="bg-white rounded-2xl shadow-sm p-7 md:p-10">
-          <div className="flex flex-col lg:flex-row gap-10 items-start">
-
-            {/* Address block */}
-            <div className="lg:w-80 shrink-0 space-y-5">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <RiMapPin2Line size={18} className="text-church-gold" aria-hidden="true" />
-                  <span className="font-serif font-semibold text-church-navy">Our Location</span>
-                </div>
-                <address className="font-sans text-church-gray not-italic text-sm leading-relaxed pl-6">
-                  Schulze-Delitzsch-Straße 30<br />
-                  70565 Stuttgart<br />
-                  (Vaihingen district)
-                </address>
-              </div>
-
-              <div className="flex items-start gap-2">
-                <RiCarLine size={18} className="text-church-gold shrink-0 mt-0.5" aria-hidden="true" />
-                <p className="font-sans text-church-gray text-sm">Free parking available onsite</p>
-              </div>
-
-              <div className="flex items-start gap-2">
-                <RiBusLine size={18} className="text-church-gold shrink-0 mt-0.5" aria-hidden="true" />
-                <p className="font-sans text-church-gray text-sm">
-                  Nearest S-Bahn / U-Bahn stop:<br />
-                  <strong className="text-church-navy">Lapp Kabel</strong>
-                </p>
-              </div>
-
-              <Button as="link" href="/contact" variant="outline" size="sm">
-                Get Directions
-              </Button>
-            </div>
-
-            {/* Map placeholder */}
-            <div className="flex-1 w-full">
-              <div
-                className="rounded-2xl overflow-hidden h-64 bg-church-navy/8 flex items-center justify-center border border-gray-100"
-                role="img"
-                aria-label="Map: Schulze-Delitzsch-Straße 30, 70565 Stuttgart"
-              >
-                <div className="text-center text-church-gray">
-                  <RiMapPin2Line size={40} className="mx-auto mb-3 text-church-gold/60" aria-hidden="true" />
-                  <p className="font-sans text-sm font-medium text-church-navy">Schulze-Delitzsch-Straße 30</p>
-                  <p className="font-sans text-xs text-church-gray/60 mt-1">70565 Stuttgart · Vaihingen</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* German service note */}
-      <AnimatedSection delay={0.4} className="mt-6">
-        <div className="bg-church-navy/5 border border-church-navy/10 rounded-xl px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-          <span className="font-sans text-xs uppercase tracking-widest text-church-navy/50 shrink-0">Auf Deutsch</span>
-          <p className="font-sans text-church-gray text-sm">
-            We also hold a German-language service at <strong>9:00 AM</strong> on Sundays.
-            German-speaking visitors are also warmly referred to our sister church{' '}
-            <a
-              href="https://www.wgg-baptisten.de"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-church-navy underline underline-offset-2 hover:text-church-gold transition-colors"
-            >
-              Wort Gottes Gemeinde
-            </a>.
-          </p>
-        </div>
-      </AnimatedSection>
     </SectionWrapper>
   );
 }
