@@ -1,7 +1,6 @@
 import HeroSection      from '@/components/sections/HeroSection';
 import AboutSection     from '@/components/sections/AboutSection';
 import ServicesSection  from '@/components/sections/ServicesSection';
-import LocationSection  from '@/components/sections/LocationSection';
 import EventsSection    from '@/components/sections/EventsSection';
 import BibleVerseSection from '@/components/sections/BibleVerseSection';
 import SermonsSection   from '@/components/sections/SermonsSection';
@@ -14,7 +13,6 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <LocationSection />
       <EventsSection />
       <BibleVerseSection />
       <SermonsSection />
