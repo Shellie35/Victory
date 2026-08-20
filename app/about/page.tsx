@@ -14,27 +14,35 @@ export const metadata: Metadata = {
 const beliefs = [
   {
     title: 'The Holy Scriptures',
-    text:  'We believe the King James Bible is the inspired, infallible, preserved Word of God — the sole and complete authority for faith and practice.',
+    text:  'The Holy Scriptures, both the Old and New Testaments, are given by God. Holy men of God spoke as they were moved by the Holy Ghost. The Bible is inerrant and preserved by God — the supreme authority in all matters of doctrine and life. We only use the King James Bible.',
   },
   {
-    title: 'The Triune God',
-    text:  'We believe in one God, eternally existing in three persons: Father, Son, and Holy Spirit — omniscient, omnipresent, and omnipotent.',
+    title: 'The Lord Jesus Christ',
+    text:  'Jesus Christ is the only begotten Son of the Father, who exists eternally as Almighty God and was born of a virgin. He lived a sinless life, and His death on the cross was both sufficient and vicarious for the sins of the whole world. After atoning for sins with His own blood, He ascended to heaven with a glorified body. Today, He sits at the right hand of the Father and intercedes for His own.',
   },
   {
-    title: 'Salvation Through Christ',
-    text:  'We believe Jesus Christ died for our sins, was buried, and rose again. Salvation is by grace alone, through faith alone, in Christ alone.',
+    title: 'Salvation',
+    text:  'Salvation is by grace through faith. Christ\'s substitutionary death on the cross was all that was necessary to bring sinful man back to God. Every person must be born again to enter the kingdom of God. God accomplishes regeneration whenever a sinner places his trust in the finished work of Jesus Christ for the salvation of his soul.',
   },
   {
     title: 'The Local Church',
-    text:  'We believe in the local, New Testament church as the place of worship, fellowship, discipleship, and the proclamation of the Gospel.',
+    text:  'The New Testament church is an autonomous, visible, called-out assembly of baptized believers who have voluntarily joined together to fulfil God\'s commission. The local church preaches the gospel to the lost, baptizes them, and teaches them to obey all that our Saviour has commanded. The Lord Jesus places shepherds over the church whose task is to protect, guide, and feed the sheep.',
   },
   {
-    title: 'The Great Commission',
-    text:  'We are called to take the Gospel to every nation — beginning right here in Stuttgart among the international community.',
+    title: 'Creation',
+    text:  'God created the heaven and the earth and all things therein in six literal days. We reject the modern-day teaching of evolution from one kind of living creature to another.',
   },
   {
-    title: 'The Blessed Hope',
-    text:  'We live in the blessed hope of the return of Jesus Christ and the promise of eternal life with God.',
+    title: 'The Triune God',
+    text:  'There is one, and only one, living and true God — an infinite, intelligent Spirit, the maker and supreme ruler of heaven and earth, inexpressibly glorious in holiness. In the unity of the Godhead there are three persons — the Father, the Son, and the Holy Ghost — equal in every divine perfection and executing distinct but harmonious offices in the great work of redemption.',
+  },
+  {
+    title: 'Language in Worship',
+    text:  'In our services, we only use languages that are understood by the congregation. Foreign languages are therefore allowed only when translation is provided. Our main services are conducted entirely in English.',
+  },
+  {
+    title: 'The Resurrection & Second Coming',
+    text:  'Christ rose bodily on the third day according to the Scriptures and ascended to the right hand of the throne of God. He alone is our merciful and faithful high priest. He shall return bodily, personally, and visibly. The dead in Christ shall rise first; the living saints shall be changed in a moment. Christ shall reign a thousand years in righteousness until He hath put all enemies under His feet.',
   },
 ];
 
@@ -110,7 +118,7 @@ export default function AboutPage() {
           </p>
         </AnimatedSection>
 
-        <AnimatedSection stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <AnimatedSection stagger className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {beliefs.map((belief) => (
             <AnimatedItem key={belief.title}>
               <div className="card-base p-7 h-full">
