@@ -73,6 +73,32 @@ html {
   }
 }
 
+/* Legal pages (Impressum / Datenschutz) */
+.prose-church {
+  @apply font-sans text-church-gray text-base leading-relaxed;
+}
+.prose-church h2 {
+  @apply font-serif text-church-navy text-xl md:text-2xl font-bold mt-10 mb-3 pb-2 border-b border-church-gold/20;
+}
+.prose-church h3 {
+  @apply font-serif text-church-navy text-base md:text-lg font-semibold mt-6 mb-2;
+}
+.prose-church p {
+  @apply mb-4;
+}
+.prose-church ul {
+  @apply list-disc pl-6 mb-4 space-y-1;
+}
+.prose-church li {
+  @apply text-church-gray;
+}
+.prose-church strong {
+  @apply text-church-navy font-semibold;
+}
+.prose-church a {
+  @apply text-church-navy underline underline-offset-2 hover:text-church-gold;
+}
+
 /* Skip to content */
 .skip-to-content {
   @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-church-navy focus:text-white focus:px-4 focus:py-2 focus:rounded-lg;

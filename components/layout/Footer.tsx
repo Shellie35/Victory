@@ -106,13 +106,19 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-sans text-white/40 text-xs">
             © {new Date().getFullYear()} Victory Baptist Church Stuttgart. All Rights Reserved.
           </p>
-          <p className="font-sans text-white/30 text-xs">
-            Sola Scriptura · Sola Fide · Sola Gratia
-          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/impressum" className="font-sans text-white/40 hover:text-church-gold text-xs transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-church-gold rounded">
+              Impressum
+            </Link>
+            <span className="text-white/20 text-xs">·</span>
+            <Link href="/datenschutz" className="font-sans text-white/40 hover:text-church-gold text-xs transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-church-gold rounded">
+              Datenschutz
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
